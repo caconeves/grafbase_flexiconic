@@ -23,7 +23,7 @@ const Project = g.model('Project', {
   category: g.string().search(),
   createdBy: g.relation(() => User),
 }).auth(rules => {
-  rules.public().read(),
+  rules.public().read();
   rules.private().create().delete().update();
 })
 
